@@ -128,7 +128,7 @@ function start() {
 	document.getElementById("pla").hidden = true;
 	document.getElementById("landing").hidden = true;
 	playerName = localStorage.getItem('PlayerName');
-	mail = localStorage.getItem('mail');
+	mail = localStorage.getItem('mail')|| "Not Provided";
 	playerNameht = document.getElementById("name").value;
 	mailht = document.getElementById("mail").value;
 
@@ -254,7 +254,7 @@ function storeData(name, player) {
 			mail = prompt("Enter Your mail ID");
 			localStorage.setItem("mail", mail);
 		}
-		debugger
+		
 		var PriviousGame = JSON.parse(localStorage.getItem(player.name));
 		var prviousstring = '<table><th><td>name</td><th><td>Right Word</td><th><td>Score</td></th>';
 		for (var i = 0; i < PriviousGame.length; i++) {
