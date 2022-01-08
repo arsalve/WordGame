@@ -14,10 +14,10 @@ var skiped = [];
 var playArray = [];
 var playhint = [];
 var score = 0;
-var life = 60;
+var life = 10;
 var cou, sc = 10;
-var lifetime = life;
-var lifetimeCounter = -59;
+var lifetime = 0;
+var lifetimeCounter = -life;
 var time = 0;
 var playerName = "abc";
 var mail = "";
@@ -111,7 +111,7 @@ function counter() {
 				temp = temp + " " + failed[i];
 			}
 			alert("Failed Words Are :--> " + temp);
-			endgame();
+			
 			document.getElementById("pa").innerHTML = "Game Over";
 			var dec = confirm("play again");
 			if (dec) {
@@ -119,6 +119,7 @@ function counter() {
 			} else {
 				location.reload();
 			}
+			endgame();
 		}
 	}
 }
@@ -208,6 +209,7 @@ function resume() {
 }
 //End Game function
 function endgame() {
+
 	document.getElementById("ingame").hidden = true;
 	var playe = new player(playerName, failed, sc, right, lifetimeCounter);
 	storeData(playerName, playe);
@@ -231,6 +233,7 @@ function endgame() {
 			console.log(textStatus, errorThrown);
 		}
 	});
+	
 }
 //storing Data in local memory
 function storeData(name, player) {
