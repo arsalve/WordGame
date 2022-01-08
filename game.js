@@ -133,7 +133,6 @@ function start() {
 	mailht = document.getElementById("mail").value;
 
 	if (playerName == null || mail == null) {
-		debugger
 		if (playerNameht != "" || mailht != "") {
 			localStorage.setItem('PlayerName', playerNameht);
 			localStorage.setItem("mail", mailht);
