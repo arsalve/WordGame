@@ -80,7 +80,7 @@ function buttons() {
 	keys = ["y", "b", "w", "d", "u", "f", "t", "h", "s", "j", "k", "q", "i", "n", "e", "p", "l", "r", "m", "g", "o", "v", "c", "x", "a", "z"];
 	for (i = 1; i <= 26; i++) {
 		var temp = document.getElementById("key").innerHTML;
-		document.getElementById("key").innerHTML = temp + "<button id =" + keys[lockey] + " class='btn btn-default btn-circle' onclick=Button_" + keys[lockey] + "()>" + keys[lockey] + "</button>";
+		document.getElementById("key").innerHTML = temp + "<button id =" + keys[lockey] + " class='btn btn-default btn-circle' onclick=Button('" + keys[lockey] + "')>" + keys[lockey] + "</button>";
 		if (lockey == 25) {
 			lockey = 0;
 		} else {
@@ -329,138 +329,11 @@ function storeData(name, player) {
 }
 
 //window.location.reload();
-
-//
-//Button functions for on screen keybord//
-function Button_a() {
+function Button(key) {
 	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "a";
+	document.getElementById("word").value = a + key;
 }
 
-function Button_b() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "b";
-}
-
-function Button_c() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "c";
-}
-
-function Button_d() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "d";
-}
-
-function Button_e() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "e";
-}
-
-function Button_f() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "f";
-}
-
-function Button_g() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "g";
-}
-
-function Button_h() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "h";
-}
-
-function Button_i() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "i";
-}
-
-function Button_j() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "j";
-}
-
-function Button_k() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "k";
-}
-
-function Button_l() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "l";
-}
-
-function Button_m() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "m";
-}
-
-function Button_n() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "n";
-}
-
-function Button_o() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "o";
-}
-
-function Button_p() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "p";
-}
-
-function Button_q() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "q";
-}
-
-function Button_r() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "r";
-}
-
-function Button_s() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "s";
-}
-
-function Button_t() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "t";
-}
-
-function Button_u() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "u";
-}
-
-function Button_v() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "v";
-}
-
-function Button_w() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "w";
-}
-
-function Button_x() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "x";
-}
-
-function Button_y() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "y";
-}
-
-function Button_z() {
-	var a = document.getElementById("word").value;
-	document.getElementById("word").value = a + "z";
-}
 
 function backspace() {
 	var a = document.getElementById("word").value;
